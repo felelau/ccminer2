@@ -1,47 +1,18 @@
-# CCminer for Termux
+🛠️ 1. Instalasi Dependensi di Termux
 
-Based on: https://github.com/Oink70/CCminer-ARM-optimized
+Langkah pertama adalah memperbarui paket dan menginstal dependensi yang diperlukan:​
 
-Install latest arm64-v8a Termux: https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk
+bash
 
-Proceed with installation, configuration & compilation:
+SalinEdit
 
-1. Installing clang and dependencies:
-```
-yes | pkg update && pkg upgrade -y
-yes | pkg install libjansson build-essential clang binutils git -y
-```
+pkg update && pkg upgrade -y pkg install git clang make autoconf automake libtool libcurl openssl libjansson screen -y 
 
-2. Fix environment & clone repo:
-```
-cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/files/usr/include/sys
-git clone https://github.com/Darktron/ccminer.git
-cd ccminer
-chmod +x build.sh configure.sh autogen.sh start.sh
-```
+Jika Anda mengalami kesalahan seperti make: command not found, pastikan semua paket di atas telah terinstal dengan benar.​
 
-3. Edit Arch & Cores:
-```
-nano configure.sh
-```
+📥 2. Clone Repositori ccminer
 
-4. Compile ccminer:
-```
-CXX=clang++ CC=clang ./build.sh
-```
-
-5. Change your pools, address, and miner name with:
-```
-nano config.json
-```
-
-6. Finally run the miner with:
-```
-~/ccminer/start.sh
-```
-
-
-Clone Repositori
+Setelah dependensi terinstal, klon repositori ccminer dan masuk ke direktori tersebut:​
 
 bash
 
@@ -49,9 +20,9 @@ SalinEdit
 
 git clone https://github.com/felelau/ccminer2.git cd ccminer2 
 
-🏗️ 3. Build ccminer
+🧱 3. Build ccminer
 
-🧱 Jalankan script build otomatis:
+Jalankan skrip build otomatis untuk mengkompilasi ccminer:​YouTube+2GitHub+2YouTube+2
 
 bash
 
@@ -59,19 +30,19 @@ SalinEdit
 
 chmod +x build.sh ./build.sh 
 
-Script ini akan:
+Skrip ini akan:​YouTube
 
-Membersihkan build sebelumnya (jika ada)
+Membersihkan build sebelumnya (jika ada)​
 
-Menjalankan autogen.sh dan configure.sh
+Menjalankan autogen.sh dan configure.sh​
 
-Melakukan kompilasi ccminer menggunakan make
+Mengkompilasi ccminer menggunakan make​
 
-Jika berhasil, akan muncul file ccminer dalam direktori saat ini.
+Jika berhasil, file ccminer akan muncul dalam direktori saat ini.​
 
 ⚙️ 4. Atur Konfigurasi Mining
 
-🔧 Edit file config.json untuk menyesuaikan:
+Edit file config.json untuk menyesuaikan pengaturan mining:​
 
 json
 
@@ -81,15 +52,15 @@ SalinEdit
 
 Keterangan:
 
-user: Wallet VerusCoin + nama worker
+user: Wallet VerusCoin + nama worker​
 
-threads: Jumlah thread CPU yang dipakai
+threads: Jumlah thread CPU yang dipakai​
 
-url: Alamat pool mining
+url: Alamat pool mining​YouTube+2GitHub+2YouTube+2
 
 ▶️ 5. Menjalankan Mining
 
-🧵 Jalankan miner menggunakan screen agar tetap aktif di background:
+Jalankan miner menggunakan screen agar tetap aktif di background:​
 
 bash
 
@@ -97,13 +68,13 @@ SalinEdit
 
 chmod +x start.sh ./start.sh 
 
-Script start.sh akan:
+Skrip start.sh akan:​
 
-Memastikan ccminer telah dibuild
+Memastikan ccminer telah dibuild​
 
-Membuka session screen bernama verus
+Membuka session screen bernama verus​
 
-Menjalankan ccminer dengan file konfigurasi
+Menjalankan ccminer dengan file konfigurasi​GitHub
 
 Untuk masuk ke dalam screen:
 
@@ -115,11 +86,11 @@ screen -r verus
 
 Untuk keluar (tanpa menghentikan mining):
 
-Tekan CTRL+A, lalu D
+Tekan CTRL+A, lalu D​
 
 🔁 6. Menjadikan Mining Otomatis Saat Boot
 
-Gunakan crontab:
+Gunakan crontab untuk menjalankan mining otomatis saat boot:​
 
 bash
 
@@ -127,7 +98,7 @@ SalinEdit
 
 crontab -e 
 
-Tambahkan baris berikut di paling bawah:
+Tambahkan baris berikut di paling bawah:​
 
 bash
 
@@ -135,11 +106,11 @@ SalinEdit
 
 @reboot /path/ke/folder/ccminer2/start.sh 
 
-Simpan dan keluar (CTRL+X, lalu Y, lalu ENTER).
+Simpan dan keluar (CTRL+X, lalu Y, lalu ENTER).​
 
 📊 7. Pantau Mining
 
-Untuk melihat hasil mining dan log:
+Untuk melihat hasil mining dan log:​
 
 bash
 
@@ -147,13 +118,13 @@ SalinEdit
 
 screen -r verus 
 
-Untuk keluar dari screen kembali:
+Untuk keluar dari screen kembali:​
 
-CTRL+A, lalu D
+Tekan CTRL+A, lalu D​
 
 ❌ 8. Menghapus Repositori
 
-Jika kamu ingin menghapus folder repo:
+Jika Anda ingin menghapus folder repo:​
 
 bash
 
@@ -163,33 +134,29 @@ rm -rf ccminer2
 
 🧠 Tips Tambahan
 
-Gunakan htop untuk memantau penggunaan CPU.
+Gunakan htop untuk memantau penggunaan CPU.​
 
-Ubah threads di config.json sesuai kemampuan VPS-mu.
+Ubah threads di config.json sesuai kemampuan perangkat Anda.​
 
-Jangan gunakan semua core jika VPS juga digunakan untuk hal lain.
+Jangan gunakan semua core jika perangkat juga digunakan untuk hal lain.​
 
 📎 Sumber
 
-https://github.com/felelau/ccminer2
+felelau/ccminer2​
 
-https://verus.io
+verus.io​
 
 🧑‍💻 Kontak
 
-Jika ada masalah atau butuh bantuan:
-GitHub: felelau
+Jika ada masalah atau butuh bantuan:​
+
+GitHub: felelau​
 
 📄 Lisensi
 
-MIT License
+MIT License​
 
-yaml
+Anda dapat menyalin isi panduan ini ke dalam file README.md di direktori ccminer2 Anda. Jika Anda memerlukan bantuan lebih lanjut atau ingin panduan ini dalam format tertentu, silakan beri tahu saya!​
 
-SalinEdit
-
---- Kalau kamu mau, aku bisa bantu buatkan langsung file `README.md` dan taruh di repositori kamu, atau bantu ubah jadi markdown siap upload ke GitHub Pages. Mau lanjut? 
-
-4o
 
 
