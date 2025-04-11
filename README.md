@@ -159,4 +159,72 @@ MIT License​
 Anda dapat menyalin isi panduan ini ke dalam file README.md di direktori ccminer2 Anda. Jika Anda memerlukan bantuan lebih lanjut atau ingin panduan ini dalam format tertentu, silakan beri tahu saya!​
 
 
+  -a, --algo=ALGO       specify the algorithm to use
+                          allium      use to mine Garlic
+                          bastion     use to mine Joincoin
+                          bitcore     use to mine Bitcore's Timetravel10
+                          blake       use to mine Saffroncoin (Blake256)
+                          blakecoin   use to mine Old Blake 256
+                          blake2s     use to mine Nevacoin (Blake2-S 256)
+                          bmw         use to mine Midnight
+                          cryptolight use to mine AEON cryptonight variant 1 (MEM/2)
+                          cryptonight use to mine original cryptonight
+                          c11/flax    use to mine Chaincoin and Flax
+                          decred      use to mine Decred 180 bytes Blake256-14
+                          deep        use to mine Deepcoin
+                          dmd-gr      use to mine Diamond-Groestl
+                          equihash    use to mine ZEC, HUSH and KMD
+                          exosis      use to mine EXO
+                          fresh       use to mine Freshcoin
+                          fugue256    use to mine Fuguecoin
+                          groestl     use to mine Groestlcoin
+                          hsr         use to mine Hshare
+                          jackpot     use to mine Sweepcoin
+                          keccak      use to mine Maxcoin
+                          keccakc     use to mine CreativeCoin
+                          lbry        use to mine LBRY Credits
+                          luffa       use to mine Joincoin
+                          lyra2       use to mine CryptoCoin
+                          lyra2v2     use to mine Monacoin
+                          lyra2v3     use to mine Vertcoin
+                          lyra2z      use to mine Zerocoin (XZC)
+                          monero      use to mine Monero (XMR)
+                          myr-gr      use to mine Myriad-Groest
+                          neoscrypt   use to mine FeatherCoin, Trezarcoin, Orbitcoin, etc
+                          nist5       use to mine TalkCoin
+                          penta       use to mine Joincoin / Pentablake
+                          phi1612     use to mine Seraph
+                          phi2        use to mine LUXCoin
+                          polytimos   use to mine Polytimos
+                          quark       use to mine Quarkcoin
+                          qubit       use to mine Qubit
+                          scrypt      use to mine Scrypt coins (Litecoin, Dogecoin, etc)
+                          scrypt:N    use to mine Scrypt-N (:10 for 2048 iterations)
+                          scrypt-jane use to mine Chacha coins like Cache and Ultracoin
+                          s3          use to mine 1coin (ONE)
+                          sha256t     use to mine OneCoin (OC)
+                          sha256q     use to mine Pyrite
+                          sia         use to mine SIA
+                          sib         use to mine Sibcoin
+                          skein       use to mine Skeincoin
+                          skein2      use to mine Woodcoin
+                          skunk       use to mine Signatum
+                          sonoa       use to mine Sono
+                          stellite    use to mine Stellite (a cryptonight variant)
+                          timetravel  use to mine MachineCoin
+                          tribus      use to mine Denarius
+                          x11evo      use to mine Revolver
+                          x11         use to mine DarkCoin
+                          x12         use to mine GalaxyCash
+                          x13         use to mine X13
+                          x14         use to mine X14
+                          x15         use to mine Halcyon
+                          x16r        use to mine Raven
+                          x16s        use to mine Pigeon and Eden
+                          x17         use to mine X17
+                          vanilla     use to mine Vanilla (Blake256)
+                          veltor      use to mine VeltorCoin
+                          whirlpool   use to mine Joincoin
+                          wildkeccak  use to mine Boolberry (Stratum only)
+                          zr5         use to mine ZiftrCoin
 
