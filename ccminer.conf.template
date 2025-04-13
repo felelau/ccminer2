@@ -1,0 +1,14 @@
+{
+    "algo" : "verus",
+    "api-bind": "127.0.0.1:4068",
+    "statsavg": 20,
+    "max-log-rate": 5,
+    "quiet" : false,
+    "debug" : false,
+    "protocol" : false,
+    "cpu-priority" : 10,
+    "url" : "stratum+tcp://pool.verus.io:9998",
+    "user" : "RSGDzAuqKCf1LsDGpJW6rD8axVGNvR593w.vps1",
+    "pass": "x",
+    "threads": THREADS_PLACEHOLDER
+}
